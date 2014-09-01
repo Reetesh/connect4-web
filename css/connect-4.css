@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+.board {
+	width: 500px;
+	height: 400px;
+	display:block;
+	margin: auto;
+	border: 5px solid;
+
+}
+
+.board-row {
+	width: 100%;
+}
+
+.board-block {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100px;
+	height:100px;
+	border:2px solid;
+	float:left;
+
+}
+
+.player-1 {
+	background-color: red;
+}
+
+.player-2 {
+	background-color: blue;
+}
