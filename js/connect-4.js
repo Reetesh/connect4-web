@@ -1,3 +1,4 @@
+//straightforward creation of board
 function createBoard(row, col){
 	var board = $("#c4-board");
 	for( i = 1; i <= row; i++){
@@ -23,6 +24,7 @@ function playBlock(block){
 		rows_left[play_col]--;	//keeping track of rows left in a given column
 
 		player = (player % 2) + 1;	//Next turn changes player.
+		$("#now-playing").text("Player "+player);
 	}
 }
 
@@ -52,8 +54,11 @@ function checkWin(winner, row, col){
 }
 
 function stopGame(winner){
-	alert("Player "+winner+" is the winner");
+	alert("Player "+winner+" is the winner!");
+	alert("Now resetting game");
+	location.reload(true);
 }
+
 
 function loadGame(row, col) {
 	connect = 4;	//Connect '4' is win-condition
@@ -75,7 +80,7 @@ function loadGame(row, col) {
 	createBoard(row, col);
 	
 	// onReady functions.
-	
+	$("#now-playing").text("Player "+player);
 	$(".board-block").click( function(){
 		playBlock(this);
 	});

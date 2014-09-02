@@ -32,14 +32,17 @@
 }
 
 #indicator {
-	width: 300px;
+	
 	display:block;
 	margin: auto;
+	color: #2F4F4F;
 }
 
 .player-1 {
 	
-
+	outline-width: 0px 2px 2px 0px;
+	outline-style: solid; 
+	
 	background-color: #FF4500;
 	border-radius: 50%;
 	-webkit-transition: all 1s ease-in-out;
@@ -49,6 +52,9 @@
 }
 
 .player-2 {
+	
+	outline-width: 0px 2px 2px 0px;
+	outline-style: solid;
 	
 	background-color: #87CEEB;
 	border-radius: 50%;
